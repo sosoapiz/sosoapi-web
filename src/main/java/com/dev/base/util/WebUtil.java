@@ -153,7 +153,8 @@ public class WebUtil {
 			*@CreateDate 2015年10月12日下午7:26:37
 	 */
 	public static boolean isAjaxReq(HttpServletRequest request){
-		return !StringUtils.isEmpty(request.getHeader("X-Requested-With"));
+		return !StringUtils.isEmpty(request.getHeader("X-Requested-With")) || (!StringUtils.isEmpty(request.getHeader("Accept")) && request.getHeader("Accept").indexOf("application/json") >= 0);
+		
 	}
 	
 	/**

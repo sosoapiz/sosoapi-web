@@ -44,6 +44,9 @@ public class BaseExceptionHandler implements HandlerExceptionResolver {
 		result.setViewName(viewName);
 		result.addAllObjects(errorInfo);
 		
+		// response.setStatus(Integer.parseInt((String)errorInfo.get("errorCode")));
+		response.setStatus(400);
+		
 		ex.printStackTrace();
 		
 		return result;

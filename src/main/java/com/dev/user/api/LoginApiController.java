@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -97,5 +98,15 @@ public class LoginApiController extends BaseController {
 		request.getSession().invalidate();
 
 		// return "user/login";
+	}
+	
+	@RequestMapping("/state")
+	public UserInfo state(HttpServletRequest request, HttpServletResponse response) {
+		UserInfo userInfo = getUserInfo(request);
+		if (null!=userInfo) {
+			return userInfo;
+		} else {
+			throw new TipException("forward:/forwardLogin.htm", HttpStatus.UNAUTHORIZED + "");
+		}
 	}
 }
