@@ -15,13 +15,13 @@
 	<!-- 发布组件到私服上 -->
 	<distributionManagement>
 		<snapshotRepository>
-			<id>SosoApiSnapshots</id>
-			<url>http://localhost:4080/nexus/content/repositories/SosoApiSnapshots</url>
+		    <id>snapshots</id>
+		    <url>http://maven.parim.net/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 
 		<repository>
-			<id>SosoApiReleases</id>
-			<url>http://localhost:4080/nexus/content/repositories/SosoApiReleases</url>
+		    <id>releases</id>
+		    <url>http://maven.parim.net/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
 
@@ -30,7 +30,7 @@
 		<repository>
 			<id>PublicRepositories</id>
 			<name>PublicRepositories</name>
-			<url>http://localhost:4080/nexus/content/groups/public/</url>
+			<url>http://maven.parim.net/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -47,7 +47,7 @@
 		<pluginRepository>
 			<id>PublicRepositories</id>
 			<name>PublicRepositories</name>
-			<url>http://localhost:4080/nexus/content/groups/public/</url>
+			<url>http://maven.parim.net/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
