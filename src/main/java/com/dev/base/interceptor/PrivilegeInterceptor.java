@@ -45,7 +45,7 @@ public class PrivilegeInterceptor extends HandlerInterceptorAdapter {
 		}
 		
 		//验证是否是httpclient请求爬数据
-		validHttpClient(request);
+		// validHttpClient(request);
 		
 		//TO-DO 网站稳定后需要屏蔽该功能
 		//管理员可对api文档预览和下载，方便帮用户排错
