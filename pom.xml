@@ -355,6 +355,28 @@
 			</properties>
 		</profile>
 		
+		<!-- 开发部署环境 -->
+		<profile>
+			<id>env-parim-master</id>
+			<!-- 默认生效 -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- 配置文件 -->
+				<env>parim-master</env>
+				
+				<!-- tomcat7-plugin -->
+				<tomcat7.path>/sosoapi-web</tomcat7.path>
+				<tomcat7.port>8080</tomcat7.port>
+				<tomcat7.uriEncoding>UTF-8</tomcat7.uriEncoding>
+				<tomcat7.url>http://localhost:8080/manager/text</tomcat7.url>
+				<tomcat7.server>tomcat7</tomcat7.server>
+				<tomcat7.username></tomcat7.username>
+				<tomcat7.password></tomcat7.password>
+			</properties>
+		</profile>
+		
 		<!-- 阿里云主环境 -->
 		<profile>
 			<id>env-aliyun-master</id>
