@@ -22,7 +22,7 @@
 		<property name="targetMethod" value="cubeUser"></property>
 	</bean>
 
-	<bean id="cubeTimerTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<bean id="cubeTimerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail">
 			<ref bean="cubeTimerJobDetail" />
 		</property>
@@ -38,7 +38,7 @@
 		<property name="targetMethod" value="unlock"></property>
 	</bean>
 
-	<bean id="userTimerTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<bean id="userTimerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail">
 			<ref bean="userTimerJobDetail" />
 		</property>

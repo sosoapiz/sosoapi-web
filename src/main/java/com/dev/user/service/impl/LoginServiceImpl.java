@@ -39,7 +39,7 @@ import com.dev.user.vo.UserInfo;
 		* <p>Description: 描述（简要描述类的职责、实现方式、使用注意事项等）</p>
 		* <p>CreateDate: 2015年8月8日上午10:29:42</p>
  */
-@Service
+// @Service
 public class LoginServiceImpl implements LoginService{
 	@Autowired
 	private UserBasicService userBasicService;

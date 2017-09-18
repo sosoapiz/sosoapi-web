@@ -56,4 +56,7 @@
 	
 	<tx:annotation-driven proxy-target-class="true" transaction-manager="springTransactionManager" />
 	<aop:aspectj-autoproxy />
+	
+	<!-- LDAP 集成 -->
+	<import resource="classpath:spring-ldap.xml" />
 </beans>
