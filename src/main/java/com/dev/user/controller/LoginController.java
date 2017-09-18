@@ -69,6 +69,7 @@ public class LoginController extends BaseController{
 	public String login(HttpServletRequest request,HttpServletResponse response,
 							String loginName,String passwd,
 								String validCode,boolean autoLogin,Model model){
+		System.out.println("Login Name: " + loginName);
 		ValidateUtils.notNull(loginName,ErrorCode.SYS_001, "登陆名不能为空");
 		ValidateUtils.notNull(passwd,ErrorCode.SYS_001, "登陆密码不能为空");
 		
